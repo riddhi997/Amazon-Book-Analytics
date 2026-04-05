@@ -10,7 +10,7 @@ Built with a database-first approach: all analysis executed via SQL
 queries on a DuckDB columnar database, with external API integration 
 for author gender inference.
 
-📊 [View Full Presentation](presentation.pdf)
+📊 [View Full Presentation](https://github.com/riddhi997/Amazon-Book-Analytics/blob/main/Amazon_Book_Analytics.pdf)
 
 ---
 
