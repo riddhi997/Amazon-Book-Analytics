@@ -116,7 +116,7 @@ Run in any order — all read from `amazon_books.ddb`:
 
 **Total records: 647,858 | Period: 1900s–2020s**
 
-Full schema documentation: [database_schema.md](database_schema.md)
+Full schema documentation: [database_schema.md](https://github.com/riddhi997/Amazon-Book-Analytics/blob/main/Database%20Schema)
 
 ---
 
