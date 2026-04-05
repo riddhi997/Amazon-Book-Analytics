@@ -44,33 +44,31 @@ and does gender composition correlate with pricing?
 ---
 
 ## Project Structure
-amazon-book-analytics/
-│
-├── data/                          # Raw data (see Data Sources below)
-│
-├── 01_data_cleaning.ipynb         # Clean prices, scores, extract
-│                                  # year/decade/author fields
-│                                  # Output: books_clean.csv,
-│                                  #         reviews_clean.csv
-│
-├── 02_api_gender_data.ipynb       # Genderize.io API integration —
-│                                  # gender inference for top 50 authors
-│                                  # Output: author_genders.csv
-│
-├── 03_database_setup.ipynb        # Build DuckDB database (3-table schema)
-│                                  # Output: amazon_books.ddb
-│
-├── 04_popularity_analysis.ipynb   # Q1: Decade-by-decade popularity trends
-├── 05_price_stability_analysis.ipynb  # Q2: Category pricing & stability
-├── 06_gender_price_analysis.ipynb     # Q3: Gender distribution & pricing
-│
-├── amazon_books.ddb               # DuckDB database (skip to Phase 2
-│                                  # if using this directly)
-├── database_schema.md             # Full schema documentation
-├── requirements.txt
-├── presentation.pdf               # Full project presentation
-└── README.md
----
+
+**Phase 1: Data Preparation**
+
+| Notebook | Description | Output |
+|----------|-------------|--------|
+| `01_data_cleaning.ipynb` | Clean prices, scores, extract year/decade/author fields | `books_clean.csv`, `reviews_clean.csv` |
+| `02_api_gender_data.ipynb` | Genderize.io API integration — gender inference for top 50 authors | `author_genders.csv` |
+| `03_database_setup.ipynb` | Build DuckDB database (3-table schema) | `amazon_books.ddb` |
+
+**Phase 2: Analysis** *(all read from `amazon_books.ddb`)*
+
+| Notebook | Research Question |
+|----------|-------------------|
+| `04_popularity_analysis.ipynb` | Which books and categories were most popular by decade? |
+| `05_price_stability_analysis.ipynb` | Which categories command premium prices, and how stable are they? |
+| `06_gender_price_analysis.ipynb` | How does gender distribution vary across categories and correlate with pricing? |
+
+**Other files**
+
+| File | Description |
+|------|-------------|
+| `amazon_books.ddb` | DuckDB database — skip Phase 1 and use directly |
+| `database_schema.md` | Full schema documentation |
+| `requirements.txt` | Python dependencies |
+| `presentation.pdf` | Full project presentation |
 
 ## Quick Start
 
